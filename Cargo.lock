@@ -101,6 +101,7 @@ name = "package-locksmith"
 version = "0.1.0"
 dependencies = [
  "package-locksmith-java",
+ "package-locksmith-python",
 ]
 
 [[package]]
@@ -108,7 +109,7 @@ name = "package-locksmith-java"
 version = "0.1.0"
 
 [[package]]
-name = "package_locksmith_python"
+name = "package-locksmith-python"
 version = "0.1.0"
 dependencies = [
  "anyhow",

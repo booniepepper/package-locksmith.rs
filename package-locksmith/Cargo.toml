@@ -5,3 +5,4 @@ edition = "2024"
 
 [dependencies]
 package-locksmith-java = { path = "../package-locksmith-java" }
+package-locksmith-python = { path = "../package-locksmith-python" }
