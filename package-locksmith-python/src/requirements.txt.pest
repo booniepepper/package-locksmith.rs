@@ -1,0 +1,14 @@
+document = { SOI ~ ( requirement_specifier ~ ( NEWLINE | EOI ) )* }
+requirement_specifier = { package_name ~ version_specifier? }
+
+// https://packaging.python.org/en/latest/specifications/name-normalization/
+package_name = @{ ASCII_ALPHANUMERIC ~ ( ( ASCII_ALPHANUMERIC | "." | "_" | "-" ) ~ ASCII_ALPHANUMERIC )* }
+
+// https://packaging.python.org/en/latest/specifications/version-specifiers/
+version_specifier = { version_clause ~ ( "," ~ version_clause )* }
+version_clause = { comparison_operator ~ version }
+comparison_operator = { "~=" | "==" | "!=" | "<=" | ">=" | ">" | "<" | "===" }
+version = @{ ( ASCII_ALPHANUMERIC | "." )+ }
+
+WHITESPACE = _{ " " | "\t" }
+COMMENT = _{ "#" ~ ( !"\n" ~ ANY )* }

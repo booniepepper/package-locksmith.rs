@@ -1,0 +1,7 @@
+[workspace]
+resolver = "2"
+members = [
+  "package-locksmith",
+  "package-locksmith-python",
+  "package-locksmith-java"
+]
