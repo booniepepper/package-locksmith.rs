@@ -1,5 +1,4 @@
-use crate::Purlify;
-
+// TODO: Add
 #[derive(Debug)]
 pub struct NpmPackage {
     pub scope: Option<String>,
@@ -44,19 +43,5 @@ impl TryFrom<&str> for NpmPackage {
             package_name,
             version,
         })
-    }
-}
-
-impl Purlify for NpmPackage {
-    fn purlify(&self) -> String {
-        match &self.scope {
-            Some(scope) => format!(
-                "pkg:npm/{}/{}@{}",
-                scope.replace('@', "%40"),
-                self.package_name,
-                self.version
-            ),
-            None => format!("pkg:npm/{}@{}", self.package_name, self.version),
-        }
     }
 }

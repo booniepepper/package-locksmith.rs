@@ -3,7 +3,7 @@ use std::path::Path;
 use super::npm::NpmPackage;
 use yaml_peg::repr::RcRepr;
 
-// Note: Most of the document is left unparsed
+// TODO: Flesh out. Most of the document is left unparsed
 #[derive(Debug)]
 pub struct PnpmLock {
     pub lockfile_version: String,

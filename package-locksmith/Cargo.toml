@@ -4,5 +4,7 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+package-locksmith-go = { path = "../package-locksmith-go" }
 package-locksmith-java = { path = "../package-locksmith-java" }
+package-locksmith-js = { path = "../package-locksmith-js" }
 package-locksmith-python = { path = "../package-locksmith-python" }

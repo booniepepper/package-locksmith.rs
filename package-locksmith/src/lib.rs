@@ -1,3 +1,4 @@
+pub use package_locksmith_go as go;
 pub use package_locksmith_java as java;
 pub use package_locksmith_python as python;
 

@@ -1,3 +1,4 @@
+use anyhow::Result;
 use std::path::Path;
 
 #[derive(Debug)]
@@ -31,7 +32,7 @@ pub enum HashType {
 }
 
 impl GoSum {
-    pub fn load(path: &Path) -> Result<Self, std::io::Error> {
+    pub fn load(path: &Path) -> Result<Self> {
         let contents = std::fs::read_to_string(path)?;
 
         // https://go.dev/ref/mod#go-sum-files

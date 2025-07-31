@@ -2,6 +2,8 @@
 resolver = "2"
 members = [
   "package-locksmith",
+  "package-locksmith-go",
+  "package-locksmith-java",
+  "package-locksmith-js",
   "package-locksmith-python",
-  "package-locksmith-java"
 ]

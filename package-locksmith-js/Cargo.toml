@@ -1,0 +1,9 @@
+[package]
+name = "package-locksmith-js"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.98"
+packageurl = "0.4.2"
+yaml-peg = "1.0.8"
